@@ -1,8 +1,8 @@
 module.exports = {
     database: {
-        host: 'localhost',
-        user: 'database_gim',
-        password: '123456789',
-        database: 'database_gim'
+        host: 'mysql-gestiongim.alwaysdata.net',
+        user: '309760_gim',
+        password: 'Ñ*Yelipza0312ñ',
+        database: 'gestiongim_admin'
     }
 }
