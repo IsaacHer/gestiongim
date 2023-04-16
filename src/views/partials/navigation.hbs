@@ -1,0 +1,69 @@
+<!--
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">Gestion Gim</a>
+    <!-
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    ->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto"></ul>
+        {{#if user}}
+          <li class="nav-item">
+            <a class="nav-link" href="/links">Links</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/links/add">Add a Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/profile">Profilek</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+          </li>
+        {{else}}
+          <li class="nav-item">
+            <a class="nav-link" href="/signin">Signin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/signup">Signup</a>
+          </li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>
+-->
+<!-- Header Section Begin -->
+<header class="header-section">
+    <div class="container">
+        <div class="logo">
+            <a href="../index.hbs">
+                <img src="img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="nav-menu">
+            <nav class="mainmenu mobile-menu">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/schedule">Schedule</a></li>
+                    <li><a href="/gallery">Portfolio</a></li>
+                    <li><a href="/blog">Blog</a>
+                        <ul class="dropdown">
+                            <li><a href="/blogDetails">Blog Details</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/contact">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right search-switch">
+                <i class="ti-search"></i>
+            </div>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+    </div>
+</header>
+<!-- Header End -->
