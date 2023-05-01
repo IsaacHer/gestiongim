@@ -5,17 +5,26 @@
                 <div class="card-body">
                     <form action="/links/edit/{{link.id}}" method="post">
                         <div class="form-group">
-                            <input type="text" value="{{link.title}}" class="form-control" name="title" placeholder="Title" autofocus>
+                            <input type="text" value="{{link.name}}" class="form-control" name="name" placeholder="Nombre" autofocus>
                         </div>
                         <div class="form-group">
-                            <input type="url" value="{{link.url}}" class="form-control" name="url" placeholder="URL">
+                            <input type="text" value="{{link.lastName}}" class="form-control" name="lastName" placeholder="Apellido">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" name="description" rows="2" placeholder="Description">{{link.description}}</textarea>
+                            <input type="number" value="{{link.dni}}" class="form-control" name="dni" placeholder="Cédula de Ciudadania">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" value="{{link.email}}" class="form-control" name="email" placeholder="Correo Electrónico">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" value="{{link.phoneNumber}}" class="form-control" name="phoneNumber" placeholder="Número Celular">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" value="{{link.emergencyNumber}}" class="form-control" name="emergencyNumber" placeholder="Número de Emergencia">
                         </div>
                         <div class="form-group">
                             <button class="btn btn-success btn-block">
-                                Save
+                                Guardar Cliente
                             </button>
                         </div>
                     </form>

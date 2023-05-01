@@ -1,28 +1,29 @@
 <div class="container p-4">
     <div class="row">
         {{#each links}}
-            <div class="col-md-3">
-                <div class="card text-center">
+        <div class="col-md-3">
+            {{#if warning}}
+            <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+                {{else}}
+                <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                    {{/if}}
+                    <div class="card-header">{{name}} {{lastName}}</div>
                     <div class="card-body">
-                        <a href="{{url}}" target="_blank">
-                            <h3 class="card-title text-uppercase">
-                                {{title}}                              
-                            </h3>
-                        </a>
+                        <!--<h5 class="card-title">Primary card title</h5>-->
+                        <p class="card-text">Fecha de Pago: {{fechaInicioMensualidad}}</p>
+                        <p class="card-text">Días restantes: {{missingDays}}</p>
+                        <a href="/links/delete/{{id}}" class="btn btn-danger btn-sm">Eliminar</a>
+                        <a href="/links/edit/{{id}}" class="btn btn-secondary btn-sm">Editar</a>
                     </div>
-                    <p class="m-2">{{description}}</p>
-                    <p class="text-muted">{{timeago created_at}}</p>
-                    <a href="/links/delete/{{id}}" class="btn btn-danger">Delete Link</a>
-                    <a href="/links/edit/{{id}}" class="btn btn-secondary">Edit</a>
                 </div>
             </div>
-        {{else}}
+            {{else}}
             <div class="col-md-4 mx-auto">
                 <div class="card card-body text-center">
                     <p>There are not links saved yet.</p>
                     <a href="/links/add">Creade One!</a>
                 </div>
             </div>
-        {{/each}}        
+            {{/each}}
+        </div>
     </div>
-</div>

@@ -5,18 +5,32 @@
                 <div class="card-body">
                     <form action="/links/add" method="post">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="title" placeholder="Title" autofocus>
+                            <input type="text" class="form-control" name="name" placeholder="Nombre" autofocus>
                         </div>
                         <div class="form-group">
-                            <input type="url" class="form-control" name="url" placeholder="URL">
+                            <input type="text" class="form-control" name="lastName" placeholder="Apellido">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" name="description" rows="2"
-                                placeholder="Description"></textarea>
+                            <input type="number" class="form-control" name="dni" placeholder="Cédula de Ciudadania">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" placeholder="Correo Electrónico">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" name="phoneNumber" placeholder="Número Celular">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" name="emergencyNumber" placeholder="Número de Emergencia">
+                        </div>
+                        <div class="form-group">
+                            <input type="date" class="form-control" name="dateInit" placeholder="Fecha de Inicio">
+                        </div>
+                        <div class="form-group">
+                            <input type="date" class="form-control" name="dateFinish" placeholder="Fecha Fin">
                         </div>
                         <div class="form-group">
                             <button class="btn btn-success btn-block">
-                                Save
+                                Guardar Cliente
                             </button>
                         </div>
                     </form>
