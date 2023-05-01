@@ -1,8 +1,8 @@
 module.exports = {
     database: {
-        host: 'mysql-gestiongim.alwaysdata.net',
-        user: '309760_gim',
-        password: 'Ñ*Yelipza0312ñ',
-        database: 'gestiongim_admin'
+        host: process.env.HOST,
+        user: process.env.USER_DB,
+        password: process.env.PASSWORD,
+        database: process.env.DB
     }
 }
