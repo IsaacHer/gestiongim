@@ -63,7 +63,7 @@ app.use(require('./routes/views'));
 
 app.use(require('./routes/autentication'));
 
-app.use('/links', require( './routes/links'));
+app.use('/clientes', require( './routes/links'));
 
 // Public
 app.use(express.static(path.join(__dirname, 'public')));
