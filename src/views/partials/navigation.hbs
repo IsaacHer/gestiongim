@@ -51,7 +51,7 @@
           <li><a href="/gallery">Portfolio</a></li>
           <li><a href="/blog">Blog</a></li>
           <li><a href="/contact">Contacts</a></li>
-          <li><a href="/links"><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a></li>
+          <li><a href="/signin"><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a></li>
           {{#if user}}
           <div class="btn-group">
             <button type="button" class="btn btn-danger dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true"
@@ -59,7 +59,8 @@
               <i class="fa fa-list" aria-hidden="true"></i>
             </button>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="/links">Clientes</a>
+              <a class="dropdown-item" href="/clientes">Clientes</a>
+              <a class="dropdown-item" href="/clientes/add">Añadir Cliente</a>
               <a class="dropdown-item" href="/logout">Cerrar sesión</a>
               <!--
               <a class="dropdown-item" href="#">Something else here</a>

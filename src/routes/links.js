@@ -11,7 +11,6 @@ router.get('/add', isLoggedIn, (req, res) => {
 });
 
 router.post('/add', isLoggedIn, async (req, res) => {
-    //console.log(req.body);
     
     const { name, lastName, dni, email, phoneNumber, emergencyNumber, dateInit, dateFinish } = req.body;
 
@@ -28,8 +27,8 @@ router.post('/add', isLoggedIn, async (req, res) => {
     };
 
     await pool.query('INSERT INTO customer set ?', [newLink]);
-    req.flash('success', 'Link Saved Successfully.');
-    res.redirect('/links');
+    req.flash('success', 'Cliente Guardado Satisfactoriamente.');
+    res.redirect('/clientes');
 });
 
 router.get('/', isLoggedIn, async (req, res) => {
@@ -50,8 +49,8 @@ router.get('/', isLoggedIn, async (req, res) => {
 router.get('/delete/:id', isLoggedIn, async (req, res) => {
     const { id } = req.params;
     pool.query('DELETE FROM customer WHERE ID = ?', [id]);
-    req.flash('success', 'Links Removed Successfully.');
-    res.redirect('/links');
+    req.flash('success', 'Cliente Eliminado Satisfactoriamente.');
+    res.redirect('/clientes');
 });
 
 router.get('/edit/:id', isLoggedIn, async (req, res) => {
@@ -74,8 +73,8 @@ router.post('/edit/:id', isLoggedIn, async (req, res) => {
     };
 
     await pool.query('UPDATE customer set ? WHERE id = ?', [newLink, id]);
-    req.flash('success', 'Link Edit Successfully.');
-    res.redirect('/links');
+    req.flash('success', 'Cliente Editado Satisfactoriamente.');
+    res.redirect('/clientes');
 });
 
 module.exports = router;
