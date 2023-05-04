@@ -23,7 +23,14 @@
                             <input type="tel" value="{{link.emergencyNumber}}" class="form-control" name="emergencyNumber" placeholder="Número de Emergencia">
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-success btn-block">
+                            <input type="date" value="{{link.dateInit}}" class="form-control" name="dateInit" placeholder="Fecha de Inicio">
+                        </div>
+                        <div class="form-group">
+                            <input type="date" value="{{link.dateFinish}}" class="form-control" name="dateFinish" placeholder="Fecha Fin">
+                        </div>
+                        <div class="form-group">
+                            <a class="btn btn-danger" href="/clientes" role="button">Cancelar</a>
+                            <button class="btn btn-success">
                                 Guardar Cliente
                             </button>
                         </div>

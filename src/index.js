@@ -63,6 +63,8 @@ app.use(require('./routes/views'));
 
 app.use(require('./routes/autentication'));
 
+app.use('/entrenadores', require( './routes/coach'));
+
 app.use('/clientes', require( './routes/links'));
 
 // Public

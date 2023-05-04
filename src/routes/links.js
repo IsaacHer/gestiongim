@@ -61,7 +61,7 @@ router.get('/edit/:id', isLoggedIn, async (req, res) => {
 
 router.post('/edit/:id', isLoggedIn, async (req, res) => {
     const { id } = req.params;
-    const { name, lastName, dni, email, phoneNumber, emergencyNumber } = req.body;
+    const { name, lastName, dni, email, phoneNumber, emergencyNumber, dateInit, dateFinish } = req.body;
 
     const newLink = {
         name,
@@ -70,6 +70,8 @@ router.post('/edit/:id', isLoggedIn, async (req, res) => {
         email,
         phoneNumber,
         emergencyNumber,
+        dateInit,
+        dateFinish,
     };
 
     await pool.query('UPDATE customer set ? WHERE id = ?', [newLink, id]);
