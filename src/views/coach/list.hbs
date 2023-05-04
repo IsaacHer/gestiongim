@@ -1,0 +1,25 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each coachs}}
+        <div class="col-md-3">
+            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">{{name}} {{lastName}}</div>
+                <div class="card-body">
+                    <h5 class="card-title">{{email}}</h5>
+                    <h5 class="card-title">{{phoneNumber}}</h5>
+                    <h5 class="card-title">{{salary}}</h5>
+                    <a href="/entrenadores/delete/{{id}}" class="btn btn-danger btn-sm">Eliminar</a>
+                    <a href="/entrenadores/edit/{{id}}" class="btn btn-secondary btn-sm">Editar</a>
+                </div>
+            </div>
+        </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card card-body text-center">
+                    <p>No tienes entrenadores añadidos</p>
+                    <a class="btn btn-info" href="/entrenadores/add" role="button">Crea un Entrenador</a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
